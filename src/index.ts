@@ -1,0 +1,1 @@
+export { SmallDb } from './smalldb'
