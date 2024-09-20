@@ -1,11 +1,13 @@
-export class Memory <T> {
-  data: T | object = {}
+import { IStorageAdapter } from './types'
 
-  constructor (data: T | object = {}) {
+export class Memory <T> implements IStorageAdapter {
+  data: T
+
+  constructor (data: T) {
     this.data = data
   }
 
-  async read (): Promise<T | object> {
+  async read (): Promise<T> {
     return this.data
   }
 

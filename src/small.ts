@@ -1,25 +1,19 @@
-const SMALL_KEY = 'SMALL_KEY'
+import { IStorageAdapter } from './types'
 
 export class Small<T> {
-  data: T | null
+  data: T
+  adapter: IStorageAdapter
 
-  constructor (data: T) {
+  constructor (storageAdapter: IStorageAdapter, data: T) {
+    this.adapter = storageAdapter
     this.data = data
   }
 
   async read (): Promise<void> {
-    const dataStr = localStorage.getItem(SMALL_KEY)
-    if (dataStr === null) {
-      this.data = null
-      return
-    }
-    this.data = JSON.parse(dataStr)
+    this.data = await this.adapter.read()
   }
 
   async write (): Promise<void> {
-    if (this.data === null) {
-      return
-    }
-    localStorage.setItem(SMALL_KEY, JSON.stringify(this.data))
+    await this.adapter.write(this.data)
   }
 }
