@@ -1,5 +1,5 @@
 {
-  "name": "smalldb",
+  "name": "@ruslan2k/smalldb",
   "version": "1.0.0",
   "description": "Small DataBase",
   "main": "dist/index.js",
