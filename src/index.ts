@@ -1,1 +1,1 @@
-export { SmallDb } from './smalldb'
+export { Small } from './small'

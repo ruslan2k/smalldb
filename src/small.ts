@@ -1,6 +1,6 @@
-const SMALLDB_KEY = 'SMALLDB_KEY'
+const SMALL_KEY = 'SMALL_KEY'
 
-export class SmallDb<T> {
+export class Small<T> {
   data: T | null
 
   constructor (data: T) {
@@ -8,7 +8,7 @@ export class SmallDb<T> {
   }
 
   async read (): Promise<void> {
-    const dataStr = localStorage.getItem(SMALLDB_KEY)
+    const dataStr = localStorage.getItem(SMALL_KEY)
     if (dataStr === null) {
       this.data = null
       return
@@ -20,6 +20,6 @@ export class SmallDb<T> {
     if (this.data === null) {
       return
     }
-    localStorage.setItem(SMALLDB_KEY, JSON.stringify(this.data))
+    localStorage.setItem(SMALL_KEY, JSON.stringify(this.data))
   }
 }
