@@ -1,6 +1,6 @@
 {
   "name": "@ruslan2k/smalldb",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Small DataBase",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "Ruslan K",
-  "license": "ISC",
+  "license": "MIT",
   "homepage": "https://github.com/ruslan2k/smalldb",
   "devDependencies": {
     "@types/node": "22.5.5",
