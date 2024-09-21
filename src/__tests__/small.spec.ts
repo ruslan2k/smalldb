@@ -6,7 +6,7 @@ interface IData {
   messages: string[]
 }
 
-test('Small', function () {
+test('Small', function (t) {
   const adapter = new Memory<IData>()
   const db = new Small<IData>(adapter, { messages: [] })
 })
