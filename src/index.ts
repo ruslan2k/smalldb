@@ -1,4 +1,5 @@
 export { Small } from './small'
 export { LocalStorage } from './local-storage'
 export { Memory } from './memory'
+export { JsonFile } from './json-file'
 export * from './utils'
