@@ -4,7 +4,7 @@ import { JsonFile, Small } from '../src/index'
 test('create new db', async () => {
   const filePath = './.db/db.json'
   const adapter = new JsonFile(filePath)
-  const db = new Small(adapter)
+  const db = new Small<{ users: string[] }>(adapter)
 
   expect(typeof db).toBe('object')
   expect(db.data).toEqual(undefined)
